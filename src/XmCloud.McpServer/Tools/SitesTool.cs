@@ -15,7 +15,7 @@ public class SitesTool
 
     public SitesTool()
     {
-        string? contextId = Environment.GetEnvironmentVariable("CONTEXT_ID"); //"3qYKIrZ52mZsQ2Jg3YQ9Fq";
+        string? contextId = Environment.GetEnvironmentVariable("CONTEXT_ID"); 
         var uri = new Uri($"https://edge-platform.sitecorecloud.io/v1/content/api/graphql/v1?sitecoreContextId={contextId}");
         client = new GraphQLHttpClient(uri, new SystemTextJsonSerializer());
     }
